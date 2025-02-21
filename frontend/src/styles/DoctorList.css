@@ -1,0 +1,67 @@
+.doctors-list-container {
+    padding: 20px 0;
+  }
+  
+  .doctors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .doctors-header h1 {
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 15px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: var(--transition);
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+  
+  .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-light);
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    .doctors-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .search-bar {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    
+    .doctors-grid {
+      grid-template-columns: 1fr;
+    }
+  }

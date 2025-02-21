@@ -1,0 +1,141 @@
+.book-appointment-container {
+    padding: 20px 0;
+  }
+  
+  .booking-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+  }
+  
+  .booking-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .doctor-info {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .doctor-info h2 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+  }
+  
+  .doctor-info p {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .date-picker {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    background-color: #f8f9fa;
+  }
+  
+  .helper-text {
+    margin-top: 5px;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .slots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .slot {
+    padding: 12px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .slot:hover {
+    background-color: rgba(46, 125, 255, 0.2);
+  }
+  
+  .slot.selected {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .form-group select, 
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: var(--transition);
+  }
+  
+  .form-group select:focus, 
+  .form-group input:focus, 
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+  }
+  
+  .success-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    border-top: 5px solid var(--success-color);
+  }
+  
+  .success-card h2 {
+    color: var(--success-color);
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-card {
+      padding: 20px;
+    }
+    
+    .slots-container {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .form-actions button {
+      width: 100%;
+    }
+  }
+  

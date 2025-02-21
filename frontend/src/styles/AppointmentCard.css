@@ -1,0 +1,66 @@
+.appointment-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    transition: var(--transition);
+  }
+  
+  .appointment-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .appointment-time {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .appointment-time .time {
+    font-size: 1.1rem;
+  }
+  
+  .appointment-time .duration {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-left: 5px;
+  }
+  
+  .appointment-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  .appointment-type.routine-check-up {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+  }
+  
+  .appointment-type.ultrasound {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--warning-color);
+  }
+  
+  .appointment-type.follow-up {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .appointment-content {
+    margin-bottom: 20px;
+    min-height: 100px;
+  }
+  
+  .doctor-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }

@@ -1,0 +1,100 @@
+.doctor-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .avatar-initials {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .doctor-info {
+    flex: 1;
+  }
+  
+  .doctor-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+  }
+  
+  .doctor-specialization {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .doctor-hours {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  
+  .hours-label {
+    margin-right: 5px;
+    font-weight: 500;
+  }
+  
+  .card-action {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .view-profile {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+  }
+  
+  .view-profile:hover {
+    color: var(--primary-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .doctor-card {
+      padding: 15px;
+    }
+    
+    .doctor-avatar {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .avatar-initials {
+      font-size: 24px;
+    }
+    
+    .doctor-name {
+      font-size: 1.3rem;
+    }
+  }

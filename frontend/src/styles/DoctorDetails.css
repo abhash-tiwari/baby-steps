@@ -1,0 +1,126 @@
+.doctor-details-container {
+    padding: 20px 0;
+  }
+  
+  .doctor-profile-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .doctor-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+  }
+  
+  .doctor-header h1 {
+    margin-bottom: 5px;
+    font-size: 2rem;
+  }
+  
+  .doctor-specialty {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .doctor-info {
+    margin-bottom: 40px;
+  }
+  
+  .info-section {
+    margin-bottom: 25px;
+  }
+  
+  .info-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  .appointment-section {
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+  }
+  
+  .appointment-section h2 {
+    margin-bottom: 25px;
+    color: var(--text-color);
+  }
+  
+  .date-picker-container {
+    margin-bottom: 30px;
+  }
+  
+  .date-picker-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .date-picker {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+  }
+  
+  .available-slots {
+    margin-bottom: 30px;
+  }
+  
+  .available-slots h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  
+  .time-slot {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .time-slot:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .slots-loading, .no-slots {
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: var(--text-light);
+  }
+  
+  .btn-book {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .doctor-profile-card {
+      padding: 20px;
+    }
+    
+    .slots-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+  }
+  
