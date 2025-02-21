@@ -1,0 +1,183 @@
+.managementContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+  }
+  
+  .filters {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+  }
+  
+  .searchInput {
+    flex: 1;
+    min-width: 250px;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+  }
+  
+  .filterSelect {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    min-width: 150px;
+  }
+  
+  .appointmentList {
+    display: grid;
+    gap: var(--spacing-md);
+  }
+  
+  .appointmentCard {
+    background: var(--background-white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .appointmentInfo {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .appointmentInfo h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .appointmentInfo p {
+    color: var(--text-secondary);
+    margin: var(--spacing-xs) 0;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  
+  .editButton,
+  .cancelButton {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .editButton {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .cancelButton {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .cancelButton:hover {
+    background-color: var(--danger-dark);
+  }
+  
+  .confirmDialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dialogContent {
+    background: var(--background-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .dialogContent h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+  }
+  
+  .dialogContent p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .dialogButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: flex-end;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .filters {
+      flex-direction: column;
+    }
+  
+    .searchInput,
+    .filterSelect {
+      width: 100%;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .editButton,
+    .cancelButton {
+      width: 100%;
+    }
+  }
+  
+  /* Loading and Error States */
+  .loading,
+  .error {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    background: var(--background-white);
+    margin: var(--spacing-lg) 0;
+  }
+  
+  .loading {
+    color: var(--text-primary);
+  }
+  
+  .error {
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+  }
+  
+  .loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--background-light);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto var(--spacing-md);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

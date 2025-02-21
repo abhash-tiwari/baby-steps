@@ -1,0 +1,92 @@
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #2c3e50;
+  }
+  
+  .dateSelector {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .dateButton {
+    min-width: 100px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  
+  .dateButton:hover {
+    background-color: #e9ecef;
+  }
+  
+  .dateButton.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+  }
+  
+  .selectedDate {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .timeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 12px;
+  }
+  
+  .timeSlot {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  
+  .timeSlot:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .loading, .error, .noSlots {
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 16px;
+  }
+  
+  .loading {
+    background-color: #f5f5f5;
+    color: #777;
+  }
+  
+  .error {
+    background-color: #fee;
+    color: #e74c3c;
+  }
+  
+  .noSlots {
+    background-color: #f8f9fa;
+    color: #95a5a6;
+    padding: 30px;
+  }

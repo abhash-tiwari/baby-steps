@@ -1,0 +1,133 @@
+/* src/components/Navbar/Navbar.module.css */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4CAF50;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .logo:hover {
+    color: #45a049;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .navLink:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .navLink.active {
+    color: #4CAF50;
+    background-color: #e8f5e9;
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger::before {
+    top: -6px;
+  }
+  
+  .hamburger::after {
+    bottom: -6px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .mobileMenuButton {
+      display: block;
+    }
+  
+    .navLinks {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navLinks.active {
+      display: flex;
+    }
+  
+    .navLink {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    /* Hamburger Animation */
+    .mobileMenuButton.active .hamburger {
+      background-color: transparent;
+    }
+  
+    .mobileMenuButton.active .hamburger::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  
+    .mobileMenuButton.active .hamburger::after {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+.app {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding-top: 64px; /* Height of navbar */
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
