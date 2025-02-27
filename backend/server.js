@@ -11,8 +11,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+// Protected Routes (Require Authentication)
 app.use('/api/doctors', doctorRoutes);
 app.use('/api/appointments', appointmentRoutes);
+
+// Global Error Handler
 app.use(errorHandler);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/appointment-booking')
